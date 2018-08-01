@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build: .
-    command: gunicorn composeexample.wsgi -b 0.0.0.0:8000
+    command: gunicorn composeexample.wsgi -b 0.0.0.0:8000 -w 4
     volumes:
       - .:/code
     ports:
